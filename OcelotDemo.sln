@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGetway", "OcelotGetway\OcelotGetway.csproj", "{2A6D20E0-2804-4F43-8CDF-F9F10E935E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiA", "WebApiA\WebApiA.csproj", "{8F3A9505-2C05-4CAF-8AEA-767C2F94FA21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiB", "WebApiB\WebApiB.csproj", "{F697657C-3319-42C6-BA78-69DBC862EBDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A6D20E0-2804-4F43-8CDF-F9F10E935E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6D20E0-2804-4F43-8CDF-F9F10E935E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6D20E0-2804-4F43-8CDF-F9F10E935E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6D20E0-2804-4F43-8CDF-F9F10E935E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3A9505-2C05-4CAF-8AEA-767C2F94FA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3A9505-2C05-4CAF-8AEA-767C2F94FA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3A9505-2C05-4CAF-8AEA-767C2F94FA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3A9505-2C05-4CAF-8AEA-767C2F94FA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F697657C-3319-42C6-BA78-69DBC862EBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F697657C-3319-42C6-BA78-69DBC862EBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F697657C-3319-42C6-BA78-69DBC862EBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F697657C-3319-42C6-BA78-69DBC862EBDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C144C418-94B8-405B-9C06-30348A922C67}
+	EndGlobalSection
+EndGlobal
