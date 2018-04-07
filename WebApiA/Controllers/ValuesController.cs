@@ -20,7 +20,7 @@ namespace WebApiA.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return $"value {id} from WebApiA";
         }
 
         // POST api/values

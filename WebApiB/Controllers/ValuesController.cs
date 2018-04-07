@@ -20,7 +20,7 @@ namespace WebApiB.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return $"value {id} from WebApiB";
         }
 
         // POST api/values
