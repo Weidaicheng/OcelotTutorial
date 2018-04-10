@@ -74,13 +74,27 @@
       "UpstreamPathTemplate": "/Age",
       "UpstreamHttpMethod": [ "Get" ],
       "Key": "Age"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/GetID",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/ID",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ID"
     }
   ],
   "Aggregates": [
     {
       "ReRouteKeys": [
         "Sex",
-        "Age"
+        "Age",
+        "ID"
       ],
       "UpstreamPathTemplate": "/GetUserInfo"
     }
