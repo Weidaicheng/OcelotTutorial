@@ -48,6 +48,41 @@
       ],
       "UpstreamPathTemplate": "/WebApib/values/{id}",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/GetSex",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Sex",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Sex"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/GetAge",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Age",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Age"
+    }
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "Sex",
+        "Age"
+      ],
+      "UpstreamPathTemplate": "/GetUserInfo"
     }
   ]
 }
