@@ -87,6 +87,15 @@
       "UpstreamPathTemplate": "/ID",
       "UpstreamHttpMethod": [ "Get" ],
       "Key": "ID"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Counter/Count",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/count",
+      "UpstreamHttpMethod": [ "Get" ],
+      "ServiceName": "Count",
+      "LoadBalancer": "RoundRobin",
+      "UseServiceDiscovery": true
     }
   ],
   "Aggregates": [
@@ -98,5 +107,11 @@
       ],
       "UpstreamPathTemplate": "/GetUserInfo"
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500
+    }
+  }
 }
