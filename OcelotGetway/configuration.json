@@ -10,7 +10,11 @@
         }
       ],
       "UpstreamPathTemplate": "/webapia/values",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowScopes": []
+      }
     },
     {
       "DownstreamPathTemplate": "/api/values",
@@ -96,6 +100,18 @@
       "ServiceName": "Count",
       "LoadBalancer": "RoundRobin",
       "UseServiceDiscovery": true
+    },
+    {
+      "DownstreamPathTemplate": "/api/Token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6000
+        }
+      ],
+      "UpstreamPathTemplate": "/GetToken",
+      "UpstreamHttpMethod": [ "Get" ]
     }
   ],
   "Aggregates": [
