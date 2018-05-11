@@ -29,18 +29,22 @@ namespace OcelotGetway
         {
             services.AddMvc();
 
-            services.AddOcelot(new ConfigurationBuilder()
-                .AddJsonFile("configuration.json")
-                .Build());
+            void options(IdentityServerAuthenticationOptions o)
+            {
+                o.Authority = "http://localhost:6000";
+                o.RequireHttpsMetadata = false;
+                o.ApiName = "api1";
+            }
+
+            services
+                .AddOcelot(new ConfigurationBuilder()
+                    .AddJsonFile("configuration.json")
+                    .Build())
+                .AddAdministration("/administration", options);
 
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddIdentityServerAuthentication("TestKey", options =>
-                {
-                    options.Authority = "http://localhost:6000";
-                    options.RequireHttpsMetadata = false;
-                    options.ApiName = "api1";
-                });
+                .AddIdentityServerAuthentication("TestKey", options);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
