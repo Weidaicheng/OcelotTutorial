@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotGetway", "OcelotGetway\OcelotGetway.csproj", "{2A6D20E0-2804-4F43-8CDF-F9F10E935E2E}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiA", "WebApiA\WebApiA.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiB", "WebApiB\WebApiB.csproj", "{F697657C-3319-42C6-BA78-69DBC862EBDB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{EB7EF214-CAE4-4D9F-B620-8D0652970489}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{EB7EF214-CAE4-4D9F-B620-8D0652970489}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
