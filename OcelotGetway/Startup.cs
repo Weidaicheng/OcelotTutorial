@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ocelot.Administration;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 
 namespace OcelotGetway
 {
@@ -34,6 +36,7 @@ namespace OcelotGetway
                 .AddOcelot(new ConfigurationBuilder()
                     .AddJsonFile("configuration.json")
                     .Build())
+                .AddConsul()
                 .AddAdministration("/administration", "secret");
 //                .AddAdministration("/administration", options);
 

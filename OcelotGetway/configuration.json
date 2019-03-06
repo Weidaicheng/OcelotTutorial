@@ -98,8 +98,9 @@
       "UpstreamPathTemplate": "/count",
       "UpstreamHttpMethod": [ "Get" ],
       "ServiceName": "Count",
-      "LoadBalancer": "RoundRobin",
-      "UseServiceDiscovery": true
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Token",
