@@ -34,8 +34,8 @@ namespace OcelotGetway
                 .AddOcelot(new ConfigurationBuilder()
                     .AddJsonFile("configuration.json")
                     .Build())
-                //.AddAdministration("/administration", "secret");
-                .AddAdministration("/administration", options);
+                .AddAdministration("/administration", "secret");
+//                .AddAdministration("/administration", options);
 
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
