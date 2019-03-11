@@ -26,7 +26,16 @@
         }
       ],
       "UpstreamPathTemplate": "/webapib/values",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhiteList": [
+          "myclient"
+        ],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 30,
+        "Limit": 2
+      }
     },
     {
       "DownstreamPathTemplate": "/api/values/{id}",
@@ -129,6 +138,12 @@
     "ServiceDiscoveryProvider": {
       "Host": "localhost",
       "Port": 8500
+    },
+    "RateLimitOptions": {
+      "DisableRateLimitHeaders": false,
+      "QuotaExceededMessage": "Stop request plz!",
+      "HttpStatusCode": 999,
+      "ClientIdHeader": "cid"
     }
   }
 }
