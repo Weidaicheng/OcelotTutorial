@@ -2,9 +2,12 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Ocelot.Administration;
+using Ocelot.Cache;
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Consul;
@@ -37,12 +40,15 @@ namespace OcelotGetway
                     .AddJsonFile("configuration.json")
                     .Build())
                 .AddConsul()
+                .AddCacheManager(x => x.WithDictionaryHandle())
                 .AddAdministration("/administration", "secret");
 //                .AddAdministration("/administration", options);
 
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication("TestKey", options);
+
+            services.AddSingleton<IOcelotCache<CachedResponse>, MyCache>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
