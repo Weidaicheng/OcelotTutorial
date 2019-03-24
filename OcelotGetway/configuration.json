@@ -138,6 +138,23 @@
         "TtlSeconds": 60,
         "Region": "somename"
       }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Slow/GetName",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/GetName",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking":3,
+        "DurationOfBreak":60000,
+        "TimeoutValue": 1000
+      }
     }
   ],
   "Aggregates": [

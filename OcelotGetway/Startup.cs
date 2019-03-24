@@ -11,6 +11,7 @@ using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Consul;
+using Ocelot.Provider.Polly;
 
 namespace OcelotGetway
 {
@@ -40,6 +41,7 @@ namespace OcelotGetway
                     .AddJsonFile("configuration.json")
                     .Build())
                 .AddConsul()
+                .AddPolly()
                 .AddCacheManager(x => x.WithDictionaryHandle())
                 .AddAdministration("/administration", "secret");
 //                .AddAdministration("/administration", options);

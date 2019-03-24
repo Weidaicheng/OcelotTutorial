@@ -15,6 +15,7 @@
     <PackageReference Include="Ocelot.Administration" Version="13.0.0" />
     <PackageReference Include="Ocelot.Cache.CacheManager" Version="13.0.0" />
     <PackageReference Include="Ocelot.Provider.Consul" Version="13.0.0" />
+    <PackageReference Include="Ocelot.Provider.Polly" Version="13.0.0" />
   </ItemGroup>
 
   <ItemGroup>
