@@ -13,7 +13,9 @@ namespace WebApiB.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1 from webapi B", "value2 from webapi B" };
+            var headers = Request.Headers.Select(x => $"{x.Key}:{x.Value}");
+
+            return headers;
         }
 
         // GET api/values/5

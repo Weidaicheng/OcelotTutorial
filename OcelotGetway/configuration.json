@@ -155,6 +155,37 @@
         "DurationOfBreak":60000,
         "TimeoutValue": 1000
       }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Values",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        },
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "DownstreamHeaderTransform": {
+        "Name": "Jonathan",
+        "Server": "Kestrel, Nginx",
+        "X-Forwarded-For": "{RemoteIpAddress}",
+        "Location": "{DownstreamBaseUrl}, {BaseUrl}"
+      },
+      "UpstreamPathTemplate": "/RequestHeader",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamHeaderTransform": {
+        "Uncle": "Bob",
+        "User-Agent": "PostmanRuntime/7.11.0, postman"
+      },
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
     }
   ],
   "Aggregates": [
